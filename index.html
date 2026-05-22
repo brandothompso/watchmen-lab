@@ -57,17 +57,14 @@
       gap: 1rem;
       margin-bottom: 2.8rem;
     }
-    .logo-placeholder {
-      width: 212px;
-      height: 58px;
-      border: 2px dashed rgba(255, 255, 255, 0.7);
-      border-radius: 10px;
-      display: grid;
-      place-items: center;
-      font-size: 0.8rem;
-      letter-spacing: .08em;
-      font-weight: 700;
-      text-transform: uppercase;
+    .brand-logo {
+      width: min(320px, 60vw);
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
+      background: rgba(255,255,255,.95);
+      padding: .2rem;
     }
     .nav-links a {
       color: var(--white);
@@ -236,7 +233,7 @@
   <header class="hero">
     <div class="container">
       <nav class="nav">
-        <div class="logo-placeholder">Logo Placeholder</div>
+        <img src="assets/watchmen-wordmark.svg" alt="Watchmen Solutions logo" class="brand-logo" />
         <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#benefits">Benefits</a>
@@ -376,6 +373,7 @@
           </form>
 
           <article class="card">
+            <img src="assets/watchmen-mark.svg" alt="Watchmen eagle mark" style="width:72px;height:72px;display:block;margin-bottom:.8rem" />
             <h3>Watchmen Solutions — Charlotte, NC</h3>
             <p><strong>Primary Focus:</strong> Multifamily, retail/commercial, office parks, and development sites.</p>
             <p><strong>Delivery Standard:</strong> Visible patrols, accountable reporting, and service-minded professionalism.</p>
