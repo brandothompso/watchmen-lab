@@ -25,11 +25,14 @@
       font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--slate-900);
       background-color: var(--white);
-      background-image: url("assets/watchmen-eagle.png");
-      background-repeat: no-repeat;
-      background-position: right 4vw bottom 10vh;
-      background-size: min(46vw, 620px);
-      background-attachment: fixed;
+      background-image:
+        radial-gradient(circle at 78% 76%, rgba(7,17,43,0.82) 0%, rgba(7,17,43,0.9) 38%, rgba(255,255,255,0) 68%),
+        url("assets/watchmen-eagle.png");
+      background-repeat: no-repeat, no-repeat;
+      background-position: right -16vw bottom -22vh, right -20vw bottom -24vh;
+      background-size: 86vw auto, min(72vw, 980px);
+      background-attachment: fixed, fixed;
+      background-blend-mode: normal, multiply;
       line-height: 1.5;
     }
     .container { width: min(1140px, 92%); margin: 0 auto; }
@@ -223,7 +226,11 @@
       .benefits-list,
       .grid-3 { grid-template-columns: 1fr; }
       .btn-secondary { margin-left: 0; margin-top: .5rem; }
-      body { background-attachment: scroll; background-size: 72vw; }
+      body {
+        background-attachment: scroll, scroll;
+        background-size: 110vw auto, 92vw;
+        background-position: right -30vw bottom -26vh, right -34vw bottom -28vh;
+      }
       .nav { flex-wrap: wrap; }
       .nav-links a { margin-left: .7rem; }
     }
