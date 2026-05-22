@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 280" role="img" aria-label="Watchmen Solutions logo">
+  <rect width="840" height="280" fill="#f3f3f3"/>
+  <text x="40" y="120" font-family="Arial Black, Arial, sans-serif" font-size="92" fill="#9BCB3D" letter-spacing="2">WATCHMEN</text>
+  <text x="48" y="215" font-family="Trebuchet MS, Arial, sans-serif" font-size="74" fill="#165A97" letter-spacing="14">SOLUTIONS</text>
+  <g transform="translate(650,28)">
+    <circle cx="80" cy="70" r="62" fill="#165A97"/>
+    <path fill="#fff" d="M31 58c21-30 53-32 78-17-11 0-21 1-31 8 7-1 12 0 16 2-2 6-8 8-12 9 4 2 8 4 10 8-5 7-12 11-20 14 3 5 2 11 0 17-5 14-18 23-34 26-5-2-8-5-9-10 3-17 7-34 25-43 8-4 18-5 27-5-5-3-10-4-16-3-16 1-27 10-34 20z"/>
+  </g>
+</svg>
