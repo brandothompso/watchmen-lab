@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchmen Solutions | Charlotte Patrol Services for Multifamily & Commercial</title>
+  <meta name="description" content="Professional patrol services for Charlotte multifamily and commercial properties. Visible patrols, de-escalation-first response, and GPS/photo-verified reporting." />
+  <style>
+    :root {
+      --navy-950: #07112b;
+      --navy-900: #0d1b3f;
+      --navy-800: #15316b;
+      --blue-500: #2f67ff;
+      --green-500: #9acb3c;
+      --white: #fff;
+      --slate-100: #f3f6fc;
+      --slate-200: #e3eaf8;
+      --slate-500: #56627f;
+      --slate-900: #12203d;
+      --radius: 16px;
+      --shadow: 0 18px 46px rgba(8, 17, 44, 0.2);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--slate-900);
+      background: var(--white);
+      line-height: 1.55;
+    }
+    .container { width: min(1140px, 92%); margin: 0 auto; }
+
+    .hero {
+      color: var(--white);
+      background:
+        linear-gradient(110deg, rgba(7, 17, 43, 0.92) 10%, rgba(13, 27, 63, 0.85) 55%, rgba(21, 49, 107, 0.74) 100%),
+        radial-gradient(circle at 80% 20%, rgba(47, 103, 255, 0.28), transparent 42%),
+        #0a1737;
+      padding: 1rem 0 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0, rgba(255,255,255,0.01) 1px, transparent 1px, transparent 110px);
+      pointer-events: none;
+    }
+    .hero > .container { position: relative; z-index: 1; }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .brand-wordmark {
+      display: inline-block;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-size: clamp(.9rem, 1.9vw, 1.18rem);
+      opacity: .96;
+    }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 1.1rem;
+      font-weight: 550;
+      opacity: .92;
+      font-size: .95rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 1.3rem;
+      align-items: start;
+    }
+    .eyebrow {
+      color: var(--green-500);
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: .84rem;
+      margin: 0 0 .65rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4.6vw, 3.1rem);
+      line-height: 1.12;
+      max-width: 18ch;
+      font-weight: 600;
+    }
+    .hero-copy {
+      color: rgba(255,255,255,.92);
+      margin: .8rem 0 1rem;
+      max-width: 57ch;
+      font-size: 1.04rem;
+    }
+    .proof-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin: 0 0 1.1rem;
+      padding: 0;
+      list-style: none;
+    }
+    .proof-row li {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 999px;
+      padding: .42rem .75rem;
+      font-size: .84rem;
+      font-weight: 600;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      padding: .86rem 1.3rem;
+    }
+    .btn-primary { background: var(--white); color: var(--navy-900); box-shadow: 0 10px 22px rgba(0,0,0,.25); }
+    .btn-secondary {
+      color: rgba(255,255,255,.86);
+      border: 1px solid rgba(255,255,255,.24);
+      background: rgba(255,255,255,.05);
+      margin-left: .65rem;
+    }
+
+    .cred-card {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+      padding: 1.2rem;
+    }
+    .cred-card h3 { margin-top: 0; margin-bottom: .7rem; font-size: 1.18rem; }
+    .metric {
+      border-top: 1px solid rgba(255,255,255,.2);
+      padding-top: .7rem;
+      margin-top: .7rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: .6rem;
+    }
+    .metric strong { font-size: 1.4rem; line-height: 1; }
+    .metric span { color: rgba(255,255,255,.88); font-size: .92rem; }
+
+    .section { padding: 4.3rem 0; }
+    .section.light { background: var(--slate-100); }
+    .section-title { text-align: center; margin-bottom: 2rem; }
+    .section-title h2 { font-size: clamp(1.65rem, 4vw, 2.3rem); margin-bottom: .55rem; }
+    .section-title p { color: var(--slate-500); max-width: 67ch; margin: 0 auto; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: 0 8px 18px rgba(7, 17, 43, 0.07);
+    }
+    .card h3 { margin-top: 0; margin-bottom: .5rem; }
+    .card p { margin: 0; color: #33415f; }
+
+    .benefits-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+
+    .cta-box {
+      background: linear-gradient(120deg, var(--navy-900), var(--navy-800));
+      border-radius: var(--radius);
+      padding: 2rem;
+      color: var(--white);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr .95fr;
+      gap: 1rem;
+    }
+    form {
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      background: var(--white);
+    }
+    label { display: block; font-weight: 650; margin-bottom: .38rem; font-size: .94rem; }
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid #cad5ee;
+      border-radius: 10px;
+      padding: .74rem .78rem;
+      font: inherit;
+      margin-bottom: .84rem;
+    }
+    textarea { min-height: 115px; resize: vertical; }
+    .submit {
+      border: none;
+      background: var(--navy-900);
+      color: var(--white);
+      font-weight: 700;
+      border-radius: 10px;
+      padding: .82rem 1rem;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .small { font-size: .87rem; color: var(--slate-500); }
+    footer { text-align: center; color: var(--slate-500); padding: 2rem 0 2.5rem; font-size: .9rem; }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .cta-box,
+      .contact-grid,
+      .benefits-list,
+      .grid-3 { grid-template-columns: 1fr; }
+      .btn-secondary { margin-left: 0; margin-top: .55rem; }
+      .nav { flex-wrap: wrap; }
+      .nav-links a { margin-left: .7rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <nav class="nav">
+        <a href="#" class="brand-wordmark" aria-label="Watchmen Solutions">Watchmen Solutions</a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Charlotte Patrol Coverage for Multifamily & Commercial</p>
+          <h1>Visible, professional patrol coverage for Charlotte properties.</h1>
+          <p class="hero-copy">
+            We patrol multifamily and commercial sites with consistent routes, clear standards, and fast communication.
+            Teams are trained to de-escalate, assist residents and staff, and document activity with GPS and photo-verified reports.
+          </p>
+          <ul class="proof-row">
+            <li>GPS + Photo Verified Tours</li>
+            <li>De-escalation First Response</li>
+            <li>Security Athlete® Trained Officers</li>
+          </ul>
+          <a class="btn btn-primary" href="#contact">Book a Property Assessment</a>
+          <a class="btn btn-secondary" href="#services">See Patrol Programs</a>
+        </div>
+
+        <aside class="cred-card">
+          <h3>Operational trust signals for property managers and asset teams.</h3>
+          <div class="metric">
+            <strong>GPS Verified</strong>
+            <span>Each tour is tracked by route and checkpoint so activity is verifiable.</span>
+          </div>
+          <div class="metric">
+            <strong>Dispatch Supported</strong>
+            <span>Coverage is backed by dispatch coordination for after-hours and escalation events.</span>
+          </div>
+          <div class="metric">
+            <strong>Charlotte Focused</strong>
+            <span>Local operations with accountability reporting delivered to your management team.</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Patrol Services for Charlotte Properties</h2>
+          <p>Programs designed for multifamily communities, retail centers, office parks, and active development sites.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Visible Mobile Patrol</h3>
+            <p>Marked patrol vehicles circulate your property on strategic schedules to deter loitering, trespassing, theft, and after-hours disruption.</p>
+          </article>
+          <article class="card">
+            <h3>On-Foot Site Presence</h3>
+            <p>Uniformed officers walk key zones, engage residents and tenants respectfully, and identify maintenance or safety issues before they escalate.</p>
+          </article>
+          <article class="card">
+            <h3>Incident & Alarm Response</h3>
+            <p>Structured field response with de-escalation tactics, immediate supervisor communication, and complete incident documentation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section light" id="benefits">
+      <div class="container">
+        <div class="section-title">
+          <h2>Why Teams Choose Watchmen Solutions</h2>
+          <p>We combine strong security fundamentals with service-level professionalism that supports your brand reputation.</p>
+        </div>
+        <div class="benefits-list">
+          <article class="card">
+            <h3>Reporting Accountability</h3>
+            <p>Clear digital activity reports include checkpoint logs, GPS traces, and photo verification so ownership groups and managers have audit-ready visibility.</p>
+          </article>
+          <article class="card">
+            <h3>De-escalation & Customer Service</h3>
+            <p>Officers are trained to reduce friction, protect dignity, and resolve issues calmly while maintaining policy and site control.</p>
+          </article>
+          <article class="card">
+            <h3>Security Athlete® Positioning</h3>
+            <p>Our Security Athlete® standard emphasizes fitness, discipline, composure, and decision-making under pressure for reliable field performance.</p>
+          </article>
+          <article class="card">
+            <h3>Consistent Communication</h3>
+            <p>You receive fast updates, responsive support, and a dependable partner focused on resident confidence and operational continuity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Your property. Our priority.</h2>
+            <p>Schedule a quick consultation to review patrol routes, risk points, and coverage recommendations for your Charlotte site.</p>
+          </div>
+          <a class="btn btn-primary" href="#contact">Request Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Talk With Our Patrol Team</h2>
+          <p>Share your property type and service goals. We’ll follow up with a practical coverage plan.</p>
+        </div>
+        <div class="contact-grid">
+          <form>
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+
+            <label for="company">Company / Property</label>
+            <input id="company" name="company" type="text" placeholder="Property or management company" required />
+
+            <label for="email">Work Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="type">Property Type</label>
+            <select id="type" name="type">
+              <option>Multifamily</option>
+              <option>Retail & Commercial</option>
+              <option>Office Park</option>
+              <option>Development Site</option>
+            </select>
+
+            <label for="message">What coverage do you need?</label>
+            <textarea id="message" name="message" placeholder="Include patrol hours, pain points, and timeline."></textarea>
+
+            <button class="submit" type="submit">Send Request</button>
+            <p class="small">By submitting this form, you agree to be contacted by Watchmen Solutions.</p>
+          </form>
+
+          <article class="card">
+            <h3>Watchmen Solutions — Charlotte, NC</h3>
+            <p><strong>Primary Focus:</strong> Multifamily, retail/commercial, office parks, and development sites.</p>
+            <p><strong>Delivery Standard:</strong> Visible patrols, accountable reporting, and service-minded professionalism.</p>
+            <p><strong>Verification:</strong> GPS tracking and photo-confirmed tour activity.</p>
+            <p><strong>Approach:</strong> Deter • De-escalate • Document • Communicate.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Watchmen Solutions. All rights reserved.</footer>
+</body>
+</html>
