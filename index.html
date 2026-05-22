@@ -37,7 +37,7 @@
         linear-gradient(110deg, rgba(7, 17, 43, 0.92) 10%, rgba(13, 27, 63, 0.85) 55%, rgba(21, 49, 107, 0.74) 100%),
         radial-gradient(circle at 80% 20%, rgba(47, 103, 255, 0.28), transparent 42%),
         #0a1737;
-      padding: 1.4rem 0 4rem;
+      padding: 1rem 0 3rem;
       position: relative;
       overflow: hidden;
     }
@@ -45,7 +45,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 90px);
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,0.01) 0, rgba(255,255,255,0.01) 1px, transparent 1px, transparent 110px);
       pointer-events: none;
     }
     .hero > .container { position: relative; z-index: 1; }
@@ -55,16 +55,17 @@
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
-      margin-bottom: 2.8rem;
+      margin-bottom: 2rem;
     }
-    .brand-logo {
-      width: min(320px, 60vw);
-      height: auto;
-      display: block;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.2);
-      background: rgba(255,255,255,.95);
-      padding: .2rem;
+    .brand-wordmark {
+      display: inline-block;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-size: clamp(.9rem, 1.9vw, 1.18rem);
+      opacity: .96;
     }
     .nav-links a {
       color: var(--white);
@@ -91,13 +92,14 @@
     }
     h1 {
       margin: 0;
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1.08;
-      max-width: 16ch;
+      font-size: clamp(1.9rem, 4.6vw, 3.1rem);
+      line-height: 1.12;
+      max-width: 18ch;
+      font-weight: 600;
     }
     .hero-copy {
       color: rgba(255,255,255,.92);
-      margin: 1rem 0 1.3rem;
+      margin: .8rem 0 1rem;
       max-width: 57ch;
       font-size: 1.04rem;
     }
@@ -124,10 +126,11 @@
       font-weight: 700;
       padding: .86rem 1.3rem;
     }
-    .btn-primary { background: var(--white); color: var(--navy-900); }
+    .btn-primary { background: var(--white); color: var(--navy-900); box-shadow: 0 10px 22px rgba(0,0,0,.25); }
     .btn-secondary {
-      color: var(--white);
-      border: 1px solid rgba(255,255,255,.45);
+      color: rgba(255,255,255,.86);
+      border: 1px solid rgba(255,255,255,.24);
+      background: rgba(255,255,255,.05);
       margin-left: .65rem;
     }
 
@@ -233,7 +236,7 @@
   <header class="hero">
     <div class="container">
       <nav class="nav">
-        <img src="assets/watchmen-wordmark.svg" alt="Watchmen Solutions logo" class="brand-logo" />
+        <a href="#" class="brand-wordmark" aria-label="Watchmen Solutions">Watchmen Solutions</a>
         <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#benefits">Benefits</a>
@@ -244,10 +247,10 @@
       <div class="hero-grid">
         <div>
           <p class="eyebrow">Charlotte Patrol Coverage for Multifamily & Commercial</p>
-          <h1>Professional patrol presence your residents, staff, and tenants can see.</h1>
+          <h1>Visible, professional patrol coverage for Charlotte properties.</h1>
           <p class="hero-copy">
-            Watchmen Solutions provides disciplined patrol operations built for high-traffic properties.
-            Every tour prioritizes visibility, de-escalation, customer service, and accountable reporting with GPS and photo verification.
+            We patrol multifamily and commercial sites with consistent routes, clear standards, and fast communication.
+            Teams are trained to de-escalate, assist residents and staff, and document activity with GPS and photo-verified reports.
           </p>
           <ul class="proof-row">
             <li>GPS + Photo Verified Tours</li>
@@ -259,18 +262,18 @@
         </div>
 
         <aside class="cred-card">
-          <h3>Built for property managers who need proof, not promises.</h3>
+          <h3>Operational trust signals for property managers and asset teams.</h3>
           <div class="metric">
-            <strong>24/7</strong>
-            <span>Dispatch-backed patrol availability for nights, weekends, and high-risk windows.</span>
+            <strong>GPS Verified</strong>
+            <span>Each tour is tracked by route and checkpoint so activity is verifiable.</span>
           </div>
           <div class="metric">
-            <strong>100%</strong>
-            <span>Digitally logged checkpoints with time stamps, route tracking, and photo documentation.</span>
+            <strong>Dispatch Supported</strong>
+            <span>Coverage is backed by dispatch coordination for after-hours and escalation events.</span>
           </div>
           <div class="metric">
-            <strong>1 Team</strong>
-            <span>Consistent service mindset: professionalism, tenant respect, and fast communication.</span>
+            <strong>Charlotte Focused</strong>
+            <span>Local operations with accountability reporting delivered to your management team.</span>
           </div>
         </aside>
       </div>
@@ -373,7 +376,6 @@
           </form>
 
           <article class="card">
-            <img src="assets/watchmen-mark.svg" alt="Watchmen eagle mark" style="width:72px;height:72px;display:block;margin-bottom:.8rem" />
             <h3>Watchmen Solutions — Charlotte, NC</h3>
             <p><strong>Primary Focus:</strong> Multifamily, retail/commercial, office parks, and development sites.</p>
             <p><strong>Delivery Standard:</strong> Visible patrols, accountable reporting, and service-minded professionalism.</p>
