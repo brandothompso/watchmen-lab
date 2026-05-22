@@ -24,14 +24,19 @@
       margin: 0;
       font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--slate-900);
-      background: var(--white);
+      background-color: var(--white);
+      background-image: url("assets/watchmen-eagle.png");
+      background-repeat: no-repeat;
+      background-position: right 4vw bottom 10vh;
+      background-size: min(46vw, 620px);
+      background-attachment: fixed;
       line-height: 1.5;
     }
     .container { width: min(1140px, 92%); margin: 0 auto; }
 
     .hero {
       color: var(--white);
-      background: linear-gradient(180deg, #0b1736 0%, #0d1b3f 100%);
+      background: linear-gradient(180deg, rgba(11,23,54,.97) 0%, rgba(13,27,63,.97) 100%);
       padding: 1rem 0 2.8rem;
       position: relative;
       overflow: hidden;
@@ -67,8 +72,8 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 1.25rem;
+      grid-template-columns: minmax(0, 1.28fr) minmax(320px, .72fr);
+      gap: 1.5rem;
       align-items: start;
     }
     .eyebrow {
@@ -83,7 +88,7 @@
       margin: 0;
       font-size: clamp(1.9rem, 4.5vw, 3rem);
       line-height: 1.13;
-      max-width: 15ch;
+      max-width: 22ch;
       font-weight: 560;
       letter-spacing: -.01em;
     }
@@ -218,6 +223,7 @@
       .benefits-list,
       .grid-3 { grid-template-columns: 1fr; }
       .btn-secondary { margin-left: 0; margin-top: .5rem; }
+      body { background-attachment: scroll; background-size: 72vw; }
       .nav { flex-wrap: wrap; }
       .nav-links a { margin-left: .7rem; }
     }
@@ -238,7 +244,7 @@
       <div class="hero-grid">
         <div>
           <p class="eyebrow">Charlotte Patrol Coverage for Multifamily and Commercial Properties</p>
-          <h1>Visible patrols. Calm response. Clear documentation.</h1>
+          <h1>Visible patrols.<br />Calm response.<br />Clear documentation.</h1>
           <p class="hero-copy">
             We patrol on schedule and stay visible in the areas where problems usually start.
             When incidents happen, we de-escalate, take control, and send clear updates to management.
